@@ -7,6 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
 dist
 dist-ssr
@@ -22,3 +23,24 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Arquivos grandes
+public/teste-estampa-09.webp
+public/ESTAMPA-11-OK.webp
+public/teste estampa 01.png
+public/teste estampa 02.png
+public/teste estampa 03.png
+public/teste estampa 04.png
+public/teste estampa 5.png
+public/docs/book.pdf
+
+# Arquivos de build
+/build
+/dist
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
