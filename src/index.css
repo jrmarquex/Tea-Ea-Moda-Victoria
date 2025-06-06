@@ -1,0 +1,132 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 345 83% 41%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 47 100% 62%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 270 50% 60%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --blue: 210 100% 50%;
+    --purple: 270 50% 60%;
+    --red: 345 83% 41%;
+    --yellow: 47 100% 62%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-montserrat;
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-extrabold uppercase tracking-wider;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .tilted-image-left {
+    @apply transform -rotate-[15deg] hover:rotate-0 transition-transform duration-500;
+  }
+  
+  .tilted-image-right {
+    @apply transform rotate-[15deg] hover:rotate-0 transition-transform duration-500;
+  }
+  
+  .nav-link {
+    @apply font-bold uppercase hover:text-secondary transition-colors duration-300;
+  }
+  
+  .section-title {
+    @apply text-5xl font-black uppercase mb-6 max-md:text-3xl;
+  }
+  
+  .section-subtitle {
+    @apply text-3xl font-bold uppercase mb-4 max-md:text-xl;
+  }
+  
+  .decorative-element {
+    @apply absolute pointer-events-none;
+  }
+  
+  .content-section {
+    @apply py-20 px-8 relative overflow-hidden max-sm:py-12 max-sm:px-4;
+  }
+
+  .grid-layout {
+    @apply grid grid-cols-12 gap-6 max-md:grid-cols-6 max-sm:grid-cols-1;
+  }
+
+  .highlight-box {
+    @apply bg-accent/10 p-6 rounded-lg;
+  }
+}
